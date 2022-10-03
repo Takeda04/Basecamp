@@ -1,0 +1,13 @@
+<%= stylesheet_link_tag "style" %>
+
+<div class="commits">
+
+<%= form_with(model: [post, comment]) do |f| %>
+  <div class="form-control">
+    <%= f.rich_text_area :body %>
+    <%= f.submit submit_label, class: "btn btn-success mt-1" %>
+  </div>
+<% end %>
+
+
+</div>

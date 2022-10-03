@@ -1,0 +1,27 @@
+<body class="body-2_1">
+<div class="box">
+<img class ="img_g" src="https://cdn-icons-png.flaticon.com/512/731/731995.png" alt="">
+</div>
+<h2 class="h2">ON our site you can find anything you need</h2> <br>
+  <div class="container-2">
+<%= stylesheet_link_tag "sign" %>
+<h4 ">Register and start your work.</h4> 
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "form-control", placeholder: "Enter your email (example@gmail.com)" %>
+  </div>
+  <div class="field">
+    <% if @minimum_password_length %>  
+    <% end %><br />
+    <%=  f.password_field :password, autocomplete: "new-password",class: "form-control", placeholder: "Enter your password (123456)"%>
+  </div>
+  <div class="field"><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",class: "form-control", placeholder: "Enter your password (123456)" %>
+  </div><br>
+  <div class="actions">
+    <%= f.submit "Sign up", data: {turbo: false}, class: "btn btn-primary" %>
+  </div>
+<% end %>
+</div>
+</body>

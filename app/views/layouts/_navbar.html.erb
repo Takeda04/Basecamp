@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container-fluid">
+    <%= link_to current_user.email, root_path, class:"navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+       
+         
+            
+            <%= link_to "Edit Account", edit_user_registration_path, class:"btn btn-light mx-2" %> 
+            <%= link_to 'Logout', destroy_user_session_path, 'data-turbo-method': :delete, class:"btn btn-light" %>
+           
+      
+    </div>
+  </div>
+</nav>
+
+
+<div class = "box">
+<h1 class="h1-projec"></h1> 
+<div class ="container_p">
+
+<%- if controller_name == 'pages' %>
+<%= link_to "New posts", posts_path, class:"btn btn-primary" %>      
+<% end %>
+
+
+<%- if controller_name == 'pages' %>
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-right: 10px;">New Project</button>
+        <% end %>
+</div>
+</div>

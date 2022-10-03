@@ -1,0 +1,28 @@
+
+<div class="ends">
+  <%= link_to "Show this post", @post, class: "btn btn-primary mx-2" %>
+  <%= link_to "Back to posts", posts_path, class: "btn btn-danger" %>
+</div>
+
+
+
+<body class="body-qismi">
+
+    <h1 class="h1-4">Editing post</h1>
+
+    <div class="ortaga1">
+    
+        
+      <div class="ortaga">
+        <%= render "form", post: @post %>
+
+        <br>
+
+        <div class="btn-88">
+          <%= link_to "Back to posts", posts_path, class: "btn btn-warning" %>
+        </div>
+      </div>
+
+    </div>
+
+</body>

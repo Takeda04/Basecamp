@@ -1,0 +1,67 @@
+.body-2{
+    padding-bottom: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 100%;
+    background-color: #fff;
+   
+}
+.body-2 .box{
+    padding: 10px;
+    display: flex;
+    justify-content:center;
+    margin-top: 15%;
+}
+.img_g{
+    height: 200px;
+    width: 200px;
+    margin-top: 25%;
+    
+}
+.container-2 {
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 15px;
+    background-color: white;
+    margin-top: 0%;
+}
+
+.container-2 .h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+
+.container-2 .form-control{
+    height: 50px;
+    box-shadow: none;
+}
+
+.container-2 .actions {
+    display: flex;
+    justify-content:space-around;
+}
+
+.container-2 .actions .btn {
+    text-align: center;
+    color: white;
+    border: 1px solid #198754;
+    background-color:#198754;
+    width:200px;
+    border-radius:50px
+}
+.body-2 .forget{
+    margin-top: 40px;
+    display: flex;
+    justify-content:center;
+}
+.body-2 .p_forget{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+.btn{
+    border-radius:50px;
+}

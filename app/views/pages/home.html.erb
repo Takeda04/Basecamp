@@ -1,0 +1,50 @@
+<%= stylesheet_link_tag "my" %>
+
+<body class="body-1">
+
+
+
+  <div class="container">
+    <% if current_user %>
+          <div class="row">
+      <% @projects.each do |project| %>
+          <% if current_user.id == project.user.id %>
+
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= project.name %></h5>
+      <p class="card-text"><%= project.description %></p>
+      <%= link_to "Show", project, class:"card-link btn btn-success" %>
+    </div>
+  </div>
+  <% end %>
+  <% end %>
+  </div>
+  </div>
+  <%= render 'projects/form' %>
+
+  <% else %>
+  <div>
+       
+
+  </div>
+  <div>
+     <h1>My Basecamp</h1>
+     <img style="width:200px; height:200px; float:left; margin-left: 40%;" src="https://cdn-icons-png.flaticon.com/512/731/731995.png" alt="">
+  </div>
+  <h2 class="h2_text">The refreshingly simple, and remarkably effective, project management platform.</h2>
+  <p class="p_text" >A platform that helps people to realize their idea and profit.</p>
+  
+      
+      <div class="button">
+        <%= link_to "Sign Up!", new_user_registration_path , class:"btn" %>
+
+        <%= link_to "Sign In!", new_user_session_path , class:"btn"%>
+      </div>
+  <% end %>
+
+</div>
+
+
+</body>

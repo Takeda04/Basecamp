@@ -1,0 +1,27 @@
+<body class="body-2">
+<%= stylesheet_link_tag "sign" %>
+<div class="box">
+<img class ="img_g" src="https://cdn-icons-png.flaticon.com/512/731/731995.png" alt="">
+</div> 
+<div class="container-2">
+ <h2>Forgot your password?</h2>
+<p class="p_forget"> Enter your email address below and we'll send you password reset instructions.</p>
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %> 
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "form-control", placeholder: "Enter your email (example@gmail.com)" %>
+  </div><br>
+
+  <div class="actions">
+    <%= f.submit "New Password", data: {turbo: false}, class: "btn btn-primary" %>
+  </div>
+<% end %> <br />
+
+<%= link_to "Log in", new_session_path(resource_name), class: "btn btn-primary"%>
+<%= link_to "Sign up", new_registration_path(resource_name), class: "btn btn-primary" %>
+
+ </div>
+
+
+</body>
