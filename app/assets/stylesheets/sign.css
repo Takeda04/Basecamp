@@ -1,3 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+p{
+    margin-bottom: 0;
+}
+
 .body-2{
     padding-bottom: 300px;
     display: flex;
@@ -8,6 +18,7 @@
     background-color: #fff;
    
 }
+
 .body-2 .box{
     padding: 10px;
     display: flex;
@@ -65,3 +76,36 @@
 .btn{
     border-radius:50px;
 }
+.project-attach{
+    background-color: #D4EFDF ;
+    color: #62947d;
+    border: 1px solid #62947d;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 8px 10px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    margin-right: 35px;
+    margin-left: 35px;
+    text-decoration: none;
+}
+.project-tasks{
+    background-color: #D4EFDF ;
+    color: #62947d;
+    border: 1px solid #62947d;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 8px 10px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    text-decoration: none;
+}
+.project-tasks:hover{
+    color: black;
+}
+.project-attach:hover{
+    color: black;
+}
+

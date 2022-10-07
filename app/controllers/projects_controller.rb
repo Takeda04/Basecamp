@@ -50,6 +50,7 @@ class ProjectsController < ApplicationController
       end
     end
   end
+  
 
   # DELETE /projects/1 or /projects/1.json
   def destroy

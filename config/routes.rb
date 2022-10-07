@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
+  resources :upls
   resources :posts do 
     resources :comments
+
   end
-  resources :projects
+  resources :projects do
+    resources :tasks
+  resources :upls
+
+
+  end
+  resources :tasks
+
   root 'pages#home'
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
