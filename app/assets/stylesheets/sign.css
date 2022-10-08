@@ -108,4 +108,39 @@ p{
 .project-attach:hover{
     color: black;
 }
+.back{
+    background-color: red ;
+    color: black;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 8px 10px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    margin-right: 35px;
+    margin-left: 35px;
+    text-decoration: none;
+}
+.back:hover{
+    color: black;
+    background-color: grey;
+}
+.back1{
+    background-color: #D4EFDF ;
+    color: #62947d;
+    border: 1px solid #62947d;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 5px 10px;
+    text-align: center;
+    margin-left: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;    
+}
+.back1:hover{
+    color: black;
+    background-color: grey;
+}
+
 

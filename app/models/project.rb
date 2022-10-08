@@ -1,6 +1,9 @@
 class Project < ApplicationRecord
   belongs_to :user
-  has_many :tasks
-  has_many :upls
+  validates :name, presence: true
+  validates :description, presence: true
+
+  has_many :tasks, dependent: :destroy
+  has_many :upls, dependent: :destroy
 
 end
