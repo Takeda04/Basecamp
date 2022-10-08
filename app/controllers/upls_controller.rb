@@ -46,7 +46,7 @@ class UplsController < ApplicationController
   # DELETE projects/1/tasks/1
   def destroy
       @upl.destroy
-          redirect_to project_upls_path
+          redirect_to new_project_upl_path
   end
 
   private
