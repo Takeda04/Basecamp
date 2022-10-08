@@ -26,6 +26,7 @@ class TasksController < ApplicationController
   # POST projects/1/tasks
   def create
     @task = @project.tasks.build(task_params)
+    @tasks = @project.tasks
 
     if @task.save
       redirect_to new_project_task_path
