@@ -5,5 +5,6 @@ class Project < ApplicationRecord
 
   has_many :tasks, dependent: :destroy
   has_many :upls, dependent: :destroy
+  has_many :posts, dependent: :destroy
 
 end

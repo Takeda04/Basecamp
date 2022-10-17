@@ -6,6 +6,7 @@
       <%= button_to "Destroy this project", @project, method: :delete , class:"project-delete"  %> 
 
       <p><%= link_to "Attachment", new_project_upl_path(@project), class: "project-attach" %></p> <br />
+      <p><%= link_to "Posts", project_posts_path(@project), class: "project-attach" %></p> <br />
       <p><%= link_to "Tasks", new_project_task_path(@project), class: "project-tasks" %></p>
       <%= link_to "Back", root_path , class: "back1"%>
       

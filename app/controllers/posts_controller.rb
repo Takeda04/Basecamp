@@ -1,19 +1,22 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!, excert: %i[show index]
+
   # GET /posts or /posts.json
   def index
-    @posts = Post.all.order(created_at: :desc)
+    @project = Project.find(params[:project_id])
+    @posts = @project.posts.all
   end
 
   # GET /posts/1 or /posts/1.json
   def show
-    @post.update(views: @post.views + 1)
     @comments = @post.comments.order(created_at: :desc)
+    @pr = @post.project.id
+
   end
 
   # GET /posts/new
   def new
+    @project = Project.find(params[:project_id])
     @post = Post.new
   end
 
@@ -23,6 +26,7 @@ class PostsController < ApplicationController
 
   # POST /posts or /posts.json
   def create
+    # @project = Project.find(params[:project_id])
     @post = Post.new(post_params)
 
     respond_to do |format|
@@ -51,10 +55,11 @@ class PostsController < ApplicationController
 
   # DELETE /posts/1 or /posts/1.json
   def destroy
+    @pr = @post.project.id
     @post.destroy
 
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: "Post was successfully destroyed." }
+      format.html { redirect_to project_posts_path(@pr), notice: "Post was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -67,6 +72,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :body, :user_id)
+      params.require(:post).permit(:title, :description, :project_id)
     end
 end

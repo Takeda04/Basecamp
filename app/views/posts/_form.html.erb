@@ -1,5 +1,3 @@
-<%= stylesheet_link_tag "style" %> 
-
 <%= form_with(model: post) do |form| %>
   <% if post.errors.any? %>
     <div style="color: red">
@@ -14,19 +12,20 @@
   <% end %>
 
   <div>
-    <%= form.label :title, style: "display: block", class: "sozlar2" %>
-    <%= form.text_field :title, class: "form-control" %>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
   </div>
 
   <div>
-    <%= form.label :body, style: "display: block", class: "sozlar2" %>
-    <%= form.text_area :body,class: "form-control", cols: "50" %>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
   </div>
+
   <div>
-   
-    <%= form.number_field :user_id, value: current_user.id, type: :hidden%>
+    <%= form.text_field :project_id, value: @project.id, type: :hidden %>
   </div>
-  <div class="knop ">
-    <%= form.submit class: "btn" %>
-  </div>  
+
+  <div>
+    <%= form.submit %>
+  </div>
 <% end %>

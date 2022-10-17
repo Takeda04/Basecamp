@@ -1,37 +1,15 @@
-<%= stylesheet_link_tag "style" %>
+<p style="color: green"><%= notice %></p>
 
-<body class="body-qismi">
+<h1>Posts</h1>
 
-<div class="container">
-
-
-<div class="nav-2">
-  <%= link_to "New post", new_post_path, class: "btn mx-2"%>
-  <%= link_to "Back", new_user_session_path, class: "btn" %>
-</div>
-
-
-
-<div class="malumot">
-
-    
-<h1 class="h1-1"> Your New Posts</h1>
-
-<div class="col1">
+<div id="posts">
   <% @posts.each do |post| %>
     <%= render post %>
     <p>
-      <%= link_to "Show this post", post, class: "btn" %>
-    </p><hr />  <br /> 
+      <%= link_to "Show this post", post, class: "show-btn" %>
+    </p>
   <% end %>
 </div>
 
-</div>
-
-
-
-
-
-</div>
-
-</body>
+<%= link_to "New post", new_project_post_path(@project), class: "show-btn1" %>
+<%= link_to "Back", root_path, class: "back-post"%>

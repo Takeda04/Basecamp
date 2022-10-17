@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # resources :posts
   resources :upls
   resources :posts do 
     resources :comments
@@ -6,9 +7,10 @@ Rails.application.routes.draw do
   end
   resources :projects do
     resources :tasks
-  resources :upls
-
-
+    resources :upls
+    resources :posts do 
+    resources :comments
+  end
   end
   resources :tasks
 
